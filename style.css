@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f7f5;
+  color: #20352f;
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 25px;
+  background-color: #1f6f5b;
+  color: white;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ef8354;
+  color: #1f6f5b;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ffd6a5;
+}
+
+section,
+article {
+  margin: 25px 0;
+  padding: 25px;
+  border: 2px solid #b8d8cc;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#about {
+  background-color: #dff2e9;
+}
+
+#about img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 15px auto;
+  border: 5px solid #ef8354;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+p {
+  margin: 12px 0;
+}
+
+li {
+  margin: 6px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #8db9a8;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f5b;
+  color: white;
+}
+
+a {
+  color: #1f6f5b;
+}
+
+form {
+  max-width: 500px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #8db9a8;
+  border-radius: 5px;
+  font: inherit;
+}
+
+button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #ef8354;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d9683d;
+}
+
+footer {
+  padding: 20px;
+  background-color: #20352f;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: #ffd6a5;
+}
+
+@media (max-width: 600px) {
+  header,
+  main,
+  footer {
+    width: 95%;
+  }
+
+  header,
+  section,
+  article,
+  footer {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 4px;
+  }
+}
+
+/* Day 3 Flexbox and Grid practice */
+.day3-header,
+.day3-main,
+.day3-footer {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.day3-header {
+  padding: 25px;
+  background-color: #1f6f5b;
+  color: white;
+  text-align: center;
+}
+
+.day3-header h1 {
+  margin-bottom: 5px;
+}
+
+.day3-header p {
+  margin: 0;
+}
+
+.day3-main {
+  padding: 20px 0;
+}
+
+.lesson-section {
+  margin: 20px 0;
+  padding: 20px;
+  border: 2px solid #b8d8cc;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.lesson-section h2 {
+  margin-bottom: 10px;
+}
+
+/* Flexbox is used for one row or one column. */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.flex-box {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ef8354;
+  color: white;
+  text-align: center;
+}
+
+.flex-box h3,
+.flex-box p {
+  margin: 0;
+}
+
+/* Grid is used for rows and columns. */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  border: 3px solid #8db9a8;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.day3-footer {
+  padding: 20px;
+  background-color: #20352f;
+  color: white;
+  text-align: center;
+}
+
+/* On larger screens, the boxes become a row and the gallery has three columns. */
+@media (min-width: 768px) {
+  .flex-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .day3-header,
+  .day3-main,
+  .day3-footer {
+    width: 95%;
+  }
+}
