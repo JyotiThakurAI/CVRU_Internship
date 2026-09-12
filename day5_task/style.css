@@ -1,0 +1,23 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+input, select, textarea {
+    padding: 7px;
+    margin: 5px;
+}
+
+button {
+    padding: 7px 12px;
+    margin: 3px;
+}
+
+form {
+    width: 400px;
+}
+
+label {
+    display: block;
+    margin-top: 8px;
+}

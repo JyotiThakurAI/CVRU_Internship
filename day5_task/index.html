@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 JavaScript Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Day 5 JavaScript Tasks</h1>
+
+    <!-- TASK 1 -->
+    <h2>Task 1 - Interactive Buttons</h2>
+
+    <p id="text">This is a JavaScript practice text.</p>
+
+    <button id="redBtn">Red</button>
+    <button id="greenBtn">Green</button>
+    <button id="blueBtn">Blue</button>
+
+    <br><br>
+
+    <select id="fontFamily">
+        <option value="">Select Font</option>
+        <option value="Arial">Arial</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Courier New">Courier New</option>
+    </select>
+
+    <button id="increase">A+</button>
+    <button id="decrease">A-</button>
+
+    <p id="styleText">Move your mouse over this text.</p>
+
+
+    <!-- TASK 2 -->
+    <h2>Task 2 - Registration Form</h2>
+
+    <form id="registrationForm">
+
+        <label>First Name:</label>
+        <input type="text" id="firstName">
+
+        <label>Last Name:</label>
+        <input type="text" id="lastName">
+
+        <label>Father's Name:</label>
+        <input type="text" id="fatherName">
+
+        <label>Mobile Number:</label>
+        <input type="tel" id="mobile">
+
+        <label>Email:</label>
+        <input type="email" id="email">
+
+        <label>Date of Birth:</label>
+        <input type="date" id="dob">
+
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+
+        <br><br>
+
+        <label>Course:</label>
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="BCA">BCA</option>
+            <option value="BBA">BBA</option>
+            <option value="B.Tech">B.Tech</option>
+        </select>
+
+        <label>Hobbies:</label>
+        <input type="checkbox"> Reading
+        <input type="checkbox"> Coding
+        <input type="checkbox"> Music
+
+        <br><br>
+
+        <label>Address:</label>
+        <textarea id="address"></textarea>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+
+        <input type="checkbox" id="terms">
+        I agree to the terms and conditions
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+        <p id="formMessage"></p>
+
+    </form>
+
+
+    <!-- TASK 3 -->
+    <h2>Task 3 - Simple Calculator</h2>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+
+    <input type="number" id="num2" placeholder="Enter second number">
+
+    <br><br>
+
+    <button id="add">Add</button>
+    <button id="subtract">Subtract</button>
+    <button id="multiply">Multiply</button>
+    <button id="divide">Divide</button>
+
+    <p id="result"></p>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
