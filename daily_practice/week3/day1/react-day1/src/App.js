@@ -6,6 +6,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProfileCard from "./components/ProfileCard";
 
+import CounterApp from "./componentD3/CounterApp";
+import TextInput from "./componentD3/TextInput";
+import Toggle from "./componentD3/Toggle";
+import ButtonEvent from "./componentD3/ButtonEvent";
+import ConditionalMessage from "./componentD3/ConditionalMessage";
+import UserForm from "./componentD3/UserForm";
+
+
 function App() {
   const name = "Jyoti";
   const topic = "React JSX";
@@ -154,6 +162,71 @@ function App() {
 
         <ProfileCard profiles={profiles} />
       </div>
+
+<hr />
+
+{/* ==================== WEEK 3 - DAY 3 ==================== */}
+
+<div>
+  <h1>Week 3 - Day 3: State and React Hooks</h1>
+  <p>useState, Events, Input Handling & Conditional Rendering</p>
+
+  <hr />
+
+  {/* Task 1 - Counter App */}
+  <div>
+    <h2>Task 1 - Simple Counter App</h2>
+    <CounterApp />
+  </div>
+</div>
+
+<hr />
+
+{/* Example - Handling Input */}
+<div>
+  <h2>Example - Handling Input</h2>
+  <TextInput />
+</div>
+
+<hr />
+
+{/* Example - Conditional Rendering */}
+<div>
+  <h2>Example - Conditional Rendering</h2>
+  <Toggle />
+</div>
+
+<hr />
+
+{/* Example - Button Click Event */}
+<div>
+  <h2>Example - Button Click Event</h2>
+  <ButtonEvent />
+</div>  
+
+<hr/>
+    {/* Example - Button Click Event*/}
+  <div>
+    <h2> Example - Button Click Event </h2>
+    <ButtonEvent/>
+  </div>
+
+  <hr />
+
+{/* Example - Ternary Conditional Rendering */}
+<div>
+  <h2>Example - Ternary Conditional Rendering</h2>
+  <ConditionalMessage />
+</div>
+
+<hr />
+
+{/* Task 2 - Registration Form */}
+<div>
+  <h2>Task 2 - Registration Form</h2>
+  <UserForm />
+</div>
+
     </div>
   );
 }
