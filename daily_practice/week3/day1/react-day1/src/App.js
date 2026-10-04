@@ -13,6 +13,13 @@ import ButtonEvent from "./componentD3/ButtonEvent";
 import ConditionalMessage from "./componentD3/ConditionalMessage";
 import UserForm from "./componentD3/UserForm";
 
+import BasicEffect from "./componentD4/BasicEffect";
+import MountEffect from "./componentD4/MountEffect";
+import CountDependencyEffect from "./componentD4/CountDependencyEffect";
+import TimerCleanupEffect from "./componentD4/TimerCleanupEffect";
+import UserList from "./componentD4/UserList";
+import Posts from "./componentD4/Posts";
+
 
 function App() {
   const name = "Jyoti";
@@ -225,6 +232,55 @@ function App() {
 <div>
   <h2>Task 2 - Registration Form</h2>
   <UserForm />
+</div>
+
+
+
+<hr />
+
+{/* ==================== WEEK 3 - DAY 4 ==================== */}
+
+<div>
+  <h1>Week 3 - Day 4: useEffect Hook & Component Lifecycle</h1>
+  <p>Side Effects, Dependency Arrays, Cleanup & API Fetching</p>
+
+  <hr />
+
+  <div>
+    <h2>Example 1 - useEffect Without a Dependency Array</h2>
+    <BasicEffect />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Example 2 - useEffect With an Empty Dependency Array</h2>
+    <MountEffect />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Example 3 - useEffect With a Dependency</h2>
+    <CountDependencyEffect />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Example 4 - Cleanup With a Timer</h2>
+    <TimerCleanupEffect />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Task 1 - Fetch Users From an API</h2>
+    <UserList />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Task 2 - Fetch and Display 10 Posts</h2>
+    <Posts />
+    <hr />
+  </div>
 </div>
 
     </div>
