@@ -1,0 +1,16 @@
+.day5-external-example {
+  background: #f4f8f4;
+  border: 1px solid #d5e3d5;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.day5-external-example .title {
+  color: #28743a;
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+.day5-external-example p {
+  margin: 0;
+}

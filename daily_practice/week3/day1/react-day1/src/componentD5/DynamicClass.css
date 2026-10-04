@@ -1,0 +1,15 @@
+.dynamic-class-example .active-box,
+.dynamic-class-example .inactive-box {
+  border-radius: 6px;
+  margin-bottom: 12px;
+  padding: 16px;
+  transition: background-color 160ms ease;
+}
+
+.dynamic-class-example .active-box {
+  background: lightgreen;
+}
+
+.dynamic-class-example .inactive-box {
+  background: lightcoral;
+}

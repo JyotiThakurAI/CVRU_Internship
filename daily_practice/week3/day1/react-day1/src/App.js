@@ -20,6 +20,19 @@ import TimerCleanupEffect from "./componentD4/TimerCleanupEffect";
 import UserList from "./componentD4/UserList";
 import Posts from "./componentD4/Posts";
 
+import ButtonEventD5 from "./componentD5/ButtonEvent";
+import InputChangeEvent from "./componentD5/InputChangeEvent";
+import FormSubmit from "./componentD5/FormSubmit";
+import Parent from "./componentD5/Parent";
+import ConditionalAnd from "./componentD5/ConditionalAnd";
+import ConditionalTernary from "./componentD5/ConditionalTernary";
+import MultipleConditions from "./componentD5/MultipleConditions";
+import InlineStyle from "./componentD5/InlineStyle";
+import ExternalStyle from "./componentD5/ExternalStyle";
+import DynamicClass from "./componentD5/DynamicClass";
+import LoginForm from "./componentD5/LoginForm";
+import ConditionalWelcome from "./componentD5/ConditionalWelcome";
+
 
 function App() {
   const name = "Jyoti";
@@ -279,6 +292,89 @@ function App() {
   <div>
     <h2>Task 2 - Fetch and Display 10 Posts</h2>
     <Posts />
+    <hr />
+  </div>
+</div>
+
+<hr />
+
+{/* ==================== WEEK 3 - DAY 5 ==================== */}
+
+<div>
+  <h1>Week 3 - Day 5: Event Handling & Conditional Rendering</h1>
+  <p>React Events, Function Props, Conditional UI & Styling</p>
+
+  <hr />
+
+  <div>
+    <h2>Button Click Event</h2>
+    <ButtonEventD5 />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Input Change Event</h2>
+    <InputChangeEvent />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Form Submit Event</h2>
+    <FormSubmit />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Passing Functions as Props</h2>
+    <Parent />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Conditional Rendering - &&</h2>
+    <ConditionalAnd />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Conditional Rendering - Ternary</h2>
+    <ConditionalTernary />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Multiple Conditions - Role-Based Rendering</h2>
+    <MultipleConditions />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Inline Styling</h2>
+    <InlineStyle />
+    <hr />
+  </div>
+
+  <div>
+    <h2>External CSS Styling</h2>
+    <ExternalStyle />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Dynamic Class Names</h2>
+    <DynamicClass />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Task 1 - Login Form</h2>
+    <LoginForm />
+    <hr />
+  </div>
+
+  <div>
+    <h2>Task 2 - Conditional Welcome Messages</h2>
+    <ConditionalWelcome />
     <hr />
   </div>
 </div>
