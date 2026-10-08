@@ -1,0 +1,17 @@
+.nav {
+  padding: 15px;
+  background-color: #f2f2f2;
+}
+
+.link {
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+.link.active {
+  color: blue;
+  font-weight: bold;
+  border-bottom: 2px solid blue;
+}
