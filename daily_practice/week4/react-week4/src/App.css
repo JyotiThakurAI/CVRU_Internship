@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Light theme styles */
+.app.light {
+  background-color: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+}
+
+/* Dark theme */
+.app.dark {
+  background-color: #2d3748;
+  color: #f1f5f9;
+  min-height: 100vh;
+}

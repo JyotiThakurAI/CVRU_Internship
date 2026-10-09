@@ -5,9 +5,16 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Navbar from "./components/Navbar.jsx";
+import {useState} from "react";
+import { ThemeContext } from "./ThemeContext";
+import "./App.css";
 
 function App() {
+  const [theme, setTheme] = useState("light");
   return (
+   < ThemeContext.Provider value={{theme, setTheme}}>
+    <div className={`app ${theme}`}>
+      
     <>
       <Navbar />
 
@@ -17,9 +24,12 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/user/:id" element={<UserProfile />} />
-        <Route path="*" element={<h2>404 Page Not Found</h2>} />
+        <Route path="*" element={<h2>404 : Page Not Found</h2>} />
       </Routes>
     </>
+    </div>
+
+    </ThemeContext.Provider>
   );
 }
 
