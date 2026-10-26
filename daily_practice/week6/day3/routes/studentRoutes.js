@@ -1,27 +1,18 @@
 const express = require("express");
-const Student = require("../models/Student");
 const router = express.Router();
 
-// POST: Add a new student
-router.post("/add", async (req, res) =>{
-    try{
-        const student = await Student.create(req.body);
-        res.status(201).json({message: "Student Added Successfully", student});
-    }
-    catch (err){
-        res.status(400).json({error: err.message});
-    }
-});
+const {
+getAllStudents,
+getStudentById,
+updateStudent,
+deleteStudent,
+createStudent
+} = require("../controllers/studentController");
 
-// GET: Fetch all students
-router.get("/", async(req, res)=>{
-    try{
-        const students = await Student.find()
-        res.json(students)
-    }
-    catch (err){
-        res.status(500).json({error: err.message})
-    }
-});
-
+// CRUD endpoints
+router.get("/", getAllStudents);
+router.get("/:id", getStudentById);
+router.post("/", createStudent);
+router.put("/:id", updateStudent);
+router.delete("/:id", deleteStudent);
 module.exports = router;

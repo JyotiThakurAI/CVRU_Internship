@@ -1,28 +1,43 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-
-require("dotenv").config();
-
-const studentRoutes = require("./routes/studentRoutes");
-
 const app = express();
+
+// Built-in Middleware
 app.use(express.json());
 
-// Student API routes
-app.use("/api/students", studentRoutes);
 
-// Connect to MongoDB
+
+// MongoDB connection
 mongoose
 .connect(process.env.MONGO_URI)
-.then(()=> console.log("MongoDB connected"))
-.catch((err)=> console.log(err));
+.then(() => console.log("MongoDB Connected Successfully "))
+.catch((err) => console.log("MongoDB Connection Error:", err));
 
 // Test route
 app.get("/", (req, res) => {
-  res.send("Week 6 Day 3 - Student API is Running");
+res.send("Server Running & MongoDB Connected ✔");
 });
 
+// Custom Middleware
+const logger = require("./middleware/logger");
+app.use(logger);
 
-app.listen((5000), ()=>{
-    console.log("server is running on PORT 5000");
+// Routes
+const studentRoutes = require("./routes/studentRoutes");
+app.use("/students", studentRoutes);
+
+// Error Handling Middleware (Last)
+// Must have 4 parameters
+app.use((err, req, res, next) => {
+console.error("Error:", err.message);
+res.status(500).json({ error: "Internal Server Error" });
+});
+
+// Start Server
+// Get PORT from environment
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+console.log(`Server running on port ${PORT}`);
 });
