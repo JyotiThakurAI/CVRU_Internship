@@ -8,17 +8,6 @@ app.use(express.json());
 
 
 
-// MongoDB connection
-mongoose
-.connect(process.env.MONGO_URI)
-.then(() => console.log("MongoDB Connected Successfully "))
-.catch((err) => console.log("MongoDB Connection Error:", err));
-
-// Test route
-app.get("/", (req, res) => {
-res.send("Server Running & MongoDB Connected ✔");
-});
-
 // Custom Middleware
 const logger = require("./middleware/logger");
 app.use(logger);
@@ -26,6 +15,7 @@ app.use(logger);
 // Routes
 const studentRoutes = require("./routes/studentRoutes");
 app.use("/students", studentRoutes);
+
 
 // Error Handling Middleware (Last)
 // Must have 4 parameters
