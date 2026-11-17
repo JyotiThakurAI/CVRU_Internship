@@ -1,0 +1,15 @@
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+require("dotenv").config();
+
+app.use(express.json());
+
+// Routes
+app.use("/api", require("./routes/authRoutes"));
+
+mongoose.connect(process.env.MONGO_URI)
+.then(() => console.log("DB Connected"))
+.catch((err) => console.error(err));
+
+app.listen(process.env.PORT || 4000, () => console.log("Server running on port " + (process.env.PORT || 4000)));
