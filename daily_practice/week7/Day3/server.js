@@ -11,6 +11,7 @@ app.use(logger);
 
 // Routes
 app.use("/api", require("./routes/authRoutes"));
+app.use("/api", require("./routes/userRoutes"));
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("DB Connected"))
