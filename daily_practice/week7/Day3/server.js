@@ -5,6 +5,10 @@ require("dotenv").config();
 
 app.use(express.json());
 
+// Custom Middleware
+const logger = require("./middleware/logger");
+app.use(logger);
+
 // Routes
 app.use("/api", require("./routes/authRoutes"));
 
